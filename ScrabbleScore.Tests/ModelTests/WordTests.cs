@@ -21,5 +21,12 @@ namespace ScrabbleScore.Tests
       Word testWord = new Word();
       Assert.AreEqual(5, testWord.ScrabbleScorer("bee"));
     }
+
+    [TestMethod]
+    public void ScrabbleScorer_NotCaseSensitive_Number()
+    {
+      Word testWord = new Word();
+      Assert.AreEqual(5, testWord.ScrabbleScorer("BEe"));
+    }
   }
 }
