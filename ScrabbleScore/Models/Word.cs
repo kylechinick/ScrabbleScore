@@ -6,9 +6,8 @@ namespace ScrabbleScore.Models
 {
   public class Word
   {
-    public int ScrabbleScorer(string userWord)
-    {
-      Dictionary<char, int> myDictionary = new Dictionary<char, int>() { 
+    public string ScrabbleWord { get; set; }
+    public static Dictionary<char, int> myDictionary = new Dictionary<char, int>() { 
         {'a', 1},
         {'e', 1},
         {'i', 1},
@@ -36,6 +35,8 @@ namespace ScrabbleScore.Models
         {'z', 10},
         {'q', 10},
       };
+    public static int returnScore(string userWord)
+    {
         string userString = userWord.ToLower();
         char[] ch = new char[userString.Length]; 
         for (int i = 0; i < userString.Length; i++) { 
@@ -46,6 +47,10 @@ namespace ScrabbleScore.Models
             wordScore += myDictionary[c];
         } 
         return wordScore;
+    }
+    public Word(string scrabbleWord)
+    {
+      ScrabbleWord = scrabbleWord;
     }
   }
 }
