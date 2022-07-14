@@ -7,7 +7,8 @@ namespace ScrabbleScore.Models
   {
     public int ScrabbleScorer(string letter)
     {
-      return 2;
+      Dictionary<string, int> myDictionary = new Dictionary<string, int>() { {"A", 1}};
+      return myDictionary[letter];
     }
     // properties, constructors, methods, etc. go here
   }

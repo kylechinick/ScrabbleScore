@@ -1,8 +1,8 @@
-# API Weather Test
+# ScrabbleScore
 
 #### (Brief Description of Application)
 
-#### By (Your Name Here)
+#### By Winnie Wang and Kyle Chinick
 
 ## Technologies Used
 
