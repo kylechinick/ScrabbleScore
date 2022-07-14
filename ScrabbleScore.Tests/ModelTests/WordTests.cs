@@ -8,12 +8,18 @@ namespace ScrabbleScore.Tests
   [TestClass]
   public class WordTests
   {
-    // Test methods go here
     [TestMethod]
     public void ScrabbleScorer_TakesALetterReturnsAScore_Number()
     {
       Word testWord = new Word();
-      Assert.AreEqual(1, testWord.ScrabbleScorer("A"));
+      Assert.AreEqual(1, testWord.ScrabbleScorer("a"));
+    }
+
+    [TestMethod]
+    public void ScrabbleScorer_TakesAWordReturnsAScore_Number()
+    {
+      Word testWord = new Word();
+      Assert.AreEqual(5, testWord.ScrabbleScorer("bee"));
     }
   }
 }
